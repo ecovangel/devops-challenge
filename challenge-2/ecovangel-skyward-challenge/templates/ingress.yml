@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ecovangel-skyward-challenge-ingress
+  labels:
+    app: ecovangel-skyward-challenge  # Example label; adjust as necessary
+spec:
+  rules:
+    - host: skyward.192.168.58.2.nip.io  # Use the specific host
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ecovangel-skyward-challenge-ecovangel-skyward-challenge  # Replace with your service name
+                port:
+                  number: 8000  # Use the specific port number
