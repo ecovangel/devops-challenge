@@ -22,17 +22,16 @@ jobs:
         
       - name: Install chart-testing tool
         run: |
+          sudo apt-get update  # Ensure package lists are updated
           sudo apt-get install -y curl unzip
           curl -Lo chart-testing_3.4.0_linux_amd64.tar.gz https://github.com/helm/chart-testing/releases/download/v3.4.0/chart-testing_3.4.0_linux_amd64.tar.gz
           tar -xvf chart-testing_3.4.0_linux_amd64.tar.gz
           mkdir -p challenge-2  # Ensure the directory exists
           sudo mv ct challenge-2/ct  # Move the 'ct' executable to the 'challenge-2' directory
 
-      - name: Add challenge-2 to PATH
-        run: echo "/home/runner/work/devops-challenge/devops-challenge/challenge-2" >> $GITHUB_ENV
       
       - name: Run Helm chart tests
         run: |
-          ct lint --config ct.yaml --all  # Reference ct.yaml
-          ct install --config ct.yaml --all  # Reference ct.yaml
+          ./challenge-2/ct lint --config ct.yaml --all  # Reference ct.yaml
+          ./challenge-2/ct install --config ct.yaml --all  # Reference ct.yaml
 
