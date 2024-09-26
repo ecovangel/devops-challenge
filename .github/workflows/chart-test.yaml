@@ -26,14 +26,14 @@ jobs:
           curl -Lo chart-testing_3.4.0_linux_amd64.tar.gz https://github.com/helm/chart-testing/releases/download/v3.4.0/chart-testing_3.4.0_linux_amd64.tar.gz
           tar -xvf chart-testing_3.4.0_linux_amd64.tar.gz
           sudo mv ct /usr/local/bin/ct
-
+          
       - name: Check for ct.yaml
         run: |
           if [ ! -f ct.yaml ]; then
             echo "ct.yaml not found!"
             exit 1
           fi
-
+          
       - name: Run Helm chart tests
         run: |
           ct lint --config ct.yaml --all  # Reference ct.yaml
