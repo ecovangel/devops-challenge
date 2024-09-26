@@ -25,9 +25,6 @@ The goal of Challenge 1 is to create a simple Python web server, containerize it
 3. **Push Docker Image to Docker Hub**:  
    A GitHub Actions workflow was configured to build the Docker image automatically, tag it, and push it to Docker Hub using the `docker/build-push-action`.
 
-**Optional Features Implemented**:  
-- The Docker container accepts arguments for `host` and `port`.
-- The image was passed through the `dive` tool to check for vulnerabilities and optimizations.
 
 ---
 
@@ -45,12 +42,6 @@ Challenge 2 involves deploying the web server created in Challenge 1 to a Kubern
 
 3. **Test the Deployment**:  
    Verified the deployment by accessing the web server through the ingress. The HTML page served by the Python web server was successfully displayed in the browser.
-
-**Optional Features Implemented**:  
-- The Helm chart was validated using `helm lint` to ensure best practices.
-- Documentation for the Helm chart was generated using `norwoodj/helm-docs`.
-- End-to-end testing of the Helm chart was integrated with GitHub Actions.
-- Validated `values.yaml` using `values.schema.json`.
 
 
 ---
@@ -74,9 +65,6 @@ Challenge 3 focuses on using Terraform to define infrastructure as code (IaC) fo
 3. **Verify Deployment**:  
    The deployment was validated by accessing the load balancer URL and seeing the default web page served by the EC2 instance running Apache.
 
-**Optional Features Implemented**:  
-- Terraform best practices were followed, including state management and modularizing the code.
-- Terraform syntax was checked using `tflint` and `tfsec`.
 
 ---
 
