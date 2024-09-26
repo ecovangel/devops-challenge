@@ -29,9 +29,10 @@ jobs:
           sudo mv ct challenge-2/ct  # Move the 'ct' executable to the 'challenge-2' directory
 
       - name: Add challenge-2 to PATH
-        run: echo "::add-path::$(pwd)/challenge-2"
+        run: echo "/home/runner/work/devops-challenge/devops-challenge/challenge-2" >> $GITHUB_ENV
       
       - name: Run Helm chart tests
         run: |
           ct lint --config ct.yaml --all  # Reference ct.yaml
           ct install --config ct.yaml --all  # Reference ct.yaml
+
