@@ -5,9 +5,9 @@ chart-dirs:
   - charts
 
 # Lint configuration
-lint-conf:
-  chart-schema: https://github.com/helm/chart-testing/blob/master/ct/chart_schema.yaml
-  values-schema: https://github.com/helm/chart-testing/blob/master/ct/values.schema.json
+lint-conf: 
+  chart-schema: "https://github.com/helm/chart-testing/blob/master/ct/chart_schema.yaml"
+  values-schema: "https://github.com/helm/chart-testing/blob/master/ct/values.schema.json"
 
 # Test all Helm charts
 all: true
