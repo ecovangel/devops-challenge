@@ -5,7 +5,7 @@ chart-dirs:
   - charts
 
 # Lint configuration
-lint-conf: 
+lint-conf: |
   chart-schema: "https://github.com/helm/chart-testing/blob/master/ct/chart_schema.yaml"
   values-schema: "https://github.com/helm/chart-testing/blob/master/ct/values.schema.json"
 
