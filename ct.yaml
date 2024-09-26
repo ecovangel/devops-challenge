@@ -1,0 +1,16 @@
+# ct.yaml
+
+# The location of Helm charts to test
+chart-dirs:
+  - charts
+
+# Lint configuration
+lint-conf:
+  chart-schema: https://github.com/helm/chart-testing/blob/master/ct/chart_schema.yaml
+  values-schema: https://github.com/helm/chart-testing/blob/master/ct/values.schema.json
+
+# Test all Helm charts
+all: true
+
+# Use Helm 3 by default
+helm-extra-args: "--debug --timeout 300s"
