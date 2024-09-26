@@ -23,7 +23,7 @@ jobs:
       - name: Install chart-testing tool
         run: |
           sudo apt-get install -y curl unzip
-          curl -Lo ct https://github.com/helm/chart-testing/releases/download/v3.4.0/chart-testing_3.4.0_linux_amd64.tar.gz
+          curl -Lo chart-testing_3.4.0_linux_amd64.tar.gz https://github.com/helm/chart-testing/releases/download/v3.4.0/chart-testing_3.4.0_linux_amd64.tar.gz
           tar -xvf chart-testing_3.4.0_linux_amd64.tar.gz
           sudo mv ct /usr/local/bin/ct
           
