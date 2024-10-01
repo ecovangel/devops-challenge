@@ -1,8 +1,6 @@
 # Specify the provider
 provider "aws" {
   region     = "us-east-1"
-  access_key = "AKIAWOW4EQTEBXKKHGJ4"
-  secret_key = "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"
 }
 
 # Fetch the latest Ubuntu AMI
